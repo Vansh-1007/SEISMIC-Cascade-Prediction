@@ -21,21 +21,37 @@ This repository contains the implementation of cascade prediction using the SEIS
 ## **Overview**
 The goal of this project is to predict cascade sizes in social media platforms. Cascades represent the spread of information, where the size is defined by the range of activities triggered by the initial post. Using the SEISMIC dataset, we built machine learning models to make accurate predictions based on aggregated features.
 
----
-
 ## **Dataset Description**
-The project utilizes two datasets:
-1. **`data.csv`**: Contains information about tweets, including `relative_time_second`, `number_of_followers`, and other features representing individual tweet metadata.
-2. **`index.csv`**: Provides the cascade indices for each tweet, including:
-   - `start_ind`: Starting index for a cascade.
-   - `end_ind`: Ending index for a cascade.
-   - `tweet_id`: Unique identifier for each cascade.
 
-**Key Statistics:**
-- **Number of rows in `data.csv`**: *N/A (varies based on dataset)*.
-- **Number of rows in `index.csv`**: *N/A (varies based on dataset)*.
+The project utilizes two datasets:
+
+1. **`data.csv`**: Contains over 34 million lines of tweets and retweets with the following fields:
+   - **`relative_time_second`**: The relative post time of the tweet or retweet in seconds.
+   - **`number_of_followers`**: The number of followers of the user who posted the tweet or retweet.
+
+   The dataset includes 34,784,489 lines, and it is approximately **285 MB** in size.
+
+2. **`index.csv`**: Contains the metadata for the cascades, with the following fields:
+   - **`tweet_id`**: ID of the original tweet.
+   - **`post_time_day`**: The UTC post time (day) of the original tweet.
+   - **`start_ind`**: The first row in `data.csv` associated with this tweet.
+   - **`end_ind`**: The last row in `data.csv` associated with this tweet.
+
+   This dataset contains **166,077 lines** and is approximately **7.9 MB** in size.
+
+**Data Filtering Criteria**:
+- Only tweets that had at least 50 retweets were considered.
+- Tweets whose text did not contain a pound sign `#` (hashtag) were kept.
+- The original poster’s language was required to be **English**.
+
+In the end, after applying these criteria, **166,076 tweets** were retained.
 
 ---
+
+### **Key Statistics**:
+- **Number of rows in `data.csv`**: 34,784,489 (285 MB)
+- **Number of rows in `index.csv`**: 166,077 (7.9 MB)
+
 
 ## **Preprocessing Steps**
 1. **Data Cleaning**:
