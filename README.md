@@ -115,12 +115,24 @@ python train.py
 python evaluate.py
 
 
----
-
 ## **Conclusion**
-This project successfully predicts cascade sizes using machine learning models. The results demonstrate that **TiDeH** achieves the best performance with the lowest loss and MAE. The insights gained can be applied to analyze information spread on social media platforms.
+The analysis reveals several important findings:
 
----
+### 1. Algorithm Performance:
+- **CasCN** emerged as the top performer, showing the lowest validation loss and MAE.
+- **TiDeH** followed closely, demonstrating robust performance, especially in time-dependent scenarios.
+- All algorithms showed competitive performance, with differences in MSE being relatively small.
+
+### 2. Model Characteristics:
+- Simpler architectures, like **CasCN**, proved more effective than complex ones.
+- Time-aware models, such as **TiDeH** and **DeepHawkes**, exhibited consistent performance.
+- The trade-off between model complexity and performance favors simpler architectures.
+
+### 3. Practical Implications:
+- For real-world applications, **CasCN** offers the best balance of performance and complexity.
+- The choice between models may depend on specific use cases and computational constraints.
+- All tested models are viable options for cascade prediction tasks.
+
 
 ## **Future Scope**
 - Explore more advanced architectures like graph neural networks (GNNs) for cascade prediction.
