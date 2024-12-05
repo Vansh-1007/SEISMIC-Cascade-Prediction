@@ -11,9 +11,10 @@ This repository contains the implementation of cascade prediction using the SEIS
 4. [Feature Engineering](#feature-engineering)
 5. [Machine Learning Models](#machine-learning-models)
 6. [Results and Evaluation](#results-and-evaluation)
-7. [Visualizations](#visualizations)
-8. [How to Run](#how-to-run)
-9. [Conclusion](#conclusion)
+7. [How to Run](#how-to-run)
+8. [Conclusion](#conclusion)
+9. [Future Scope](#future-scope)
+10. [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -97,19 +98,6 @@ The models were trained on the processed dataset and evaluated on test data. The
 
 ---
 
-## **Visualizations**
-### 1. **Training and Validation Loss**
-A comparison of the training and validation loss over epochs for the DeepCas model.
-
-![Training vs Validation Loss](images/training_vs_validation.png)
-
-### 2. **Actual vs Predicted Cascade Size**
-A scatter plot showing the actual cascade sizes vs. the predicted cascade sizes.
-
-![Actual vs Predicted](images/actual_vs_predicted.png)
-
----
-
 ## **How to Run**
 ### Prerequisites
 - Python 3.8 or above
@@ -117,10 +105,15 @@ A scatter plot showing the actual cascade sizes vs. the predicted cascade sizes.
 
 ### Steps to Run
 1. Clone the repository:
+git clone https://github.com/Vansh-1007/SEISMIC-Cascade-Prediction
 2. Place `data.csv` and `index.csv` in the root directory.
 3. Run the preprocessing script:
+python preprocess.py
 4. Train the models:
-5. Visualize results:
+python train.py
+5. Evaluate results:
+python evaluate.py
+
 
 ---
 
@@ -139,4 +132,5 @@ This project successfully predicts cascade sizes using machine learning models. 
 We acknowledge the contributors of the SEISMIC dataset for providing the foundational data for this project.
 
 ---
+
 
