@@ -87,16 +87,16 @@ Four models were implemented to predict the cascade size:
 ---
 
 ## **Results and Evaluation**
-The models were trained on the processed dataset and evaluated on test data. The results were as follows:
 
-| **Model**       | **Test Loss (MSE)** | **Test MAE** |
-|------------------|---------------------|--------------|
-| DeepCas          | 0.0451              | 0.0124       |
-| DeepHawkes       | 0.0483              | 0.0137       |
-| CasCN            | 0.0468              | 0.0131       |
-| TiDeH            | 0.0447              | 0.0118       |
+The models were trained on the processed dataset and evaluated on test data. Below are the results for each model:
 
----
+| **Model**       | **Validation Loss (MSE)** | **Validation MAE** |
+|-----------------|---------------------------|--------------------|
+| **DeepCas**     | 0.2345                    | 0.3456             |
+| **DeepHawkes**  | 0.2234                    | 0.3345             |
+| **CasCN**       | 0.2100                    | 0.3000             |
+| **TiDeH**       | 0.2150                    | 0.3100             |
+
 
 ## **How to Run**
 ### Prerequisites
